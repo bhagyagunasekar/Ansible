@@ -1,5 +1,5 @@
 - name: test script module
-  hosts: windows
+  hosts: all
   tasks:
     - name: run test script
       script: test1.ps1
