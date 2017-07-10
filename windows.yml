@@ -1,8 +1,5 @@
 # Example from Ansible Playbooks.
 - hosts: all
   become: True
-- win_command: whoami
-  register: whoami_out
-
 # Run the command only if the specified file does not exist.
 - win_command: wbadmin -backupTarget:C:\backup\ creates=C:\backup\
