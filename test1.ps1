@@ -5,11 +5,10 @@ $installer=.\WindowsSensor_5121_NGAV_INCLUDED.exe /install /quiet /norestart CID
 iex $installer
 $counter=30 
 do {
-    start-sleep -s 10 
     $counter-- 
     get-service | findstr /i /r "Running.*CSNest.*CrowdStrike"
  } while ($LASTEXITCODE -gt 0 -and $counter -gt 0)
- 
+
 write-host "Installing and Enabling SSM agent"
 Invoke-WebRequest -Uri "https://s3.amazonaws.com/ec2-downloads-windows/EC2Config/EC2Install.zip" -OutFile "C:\Temp\EC2Install.zip"
 $BackUpPath = "C:\Temp\EC2Install.zip"
