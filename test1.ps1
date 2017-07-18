@@ -15,5 +15,5 @@ $BackUpPath = "C:\Temp\EC2Install.zip"
 $Destination = "C:\Temp"
 Add-Type -assembly "system.io.compression.filesystem"
 [io.compression.zipfile]::ExtractToDirectory($BackUpPath, $destination)
-cd c:\Temp\EC2Install
+cd c:\Temp
 $ssminstall=.\Ec2Install.exe /quiet /norestart
