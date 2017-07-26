@@ -1,5 +1,5 @@
-New-Item -Path c:\testing -ItemType directory
-Invoke-WebRequest -Uri "https://github.com/bhagyagunasekar/Ansible/raw/master/WindowsSensor_5121_NGAV_INCLUDED.exe" -OutFile "C:\temp\WindowsSensor_5121_NGAV_INCLUDED.exe"
+New-Item -Path c:\Temp -ItemType directory
+Invoke-WebRequest -Uri "https://github.com/bhagyagunasekar/Ansible/raw/master/WindowsSensor_5121_NGAV_INCLUDED.exe" -OutFile "C:\Temp\WindowsSensor_5121_NGAV_INCLUDED.exe"
 cd c:\Temp
 $installer=.\WindowsSensor_5121_NGAV_INCLUDED.exe /install /quiet /norestart CID="35C43E7262224DFB9AA9F142596987E5-E7"
 write-host "Installing and Enabling SSM agent"
